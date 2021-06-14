@@ -1,0 +1,22 @@
+{
+  "name": "with-tailwindcss",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "develop": "next dev",
+    "build": "cp -R node_modules/logos public/ && next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@octokit/rest": "^18.6.0",
+    "logos": "https://github.com/gilbarbara/logos.git",
+    "next": "latest",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.4",
+    "postcss": "^8.1.10",
+    "tailwindcss": "^2.1.1"
+  }
+}
