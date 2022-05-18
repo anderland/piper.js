@@ -1,8 +1,27 @@
 import Head from 'next/head';
 import logos from '../public/logos/logos.json';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 const Home = () => {
+  useEffect(() => {
+    const images = document.querySelectorAll(
+      '.logos.logos--config-dynamic .logo'
+    );
+
+    function max_img_width(image) {
+      var ideal_area = 9000;
+      var ideal_ratio = Math.sqrt(
+        ideal_area / (image.naturalWidth * image.naturalHeight)
+      );
+
+      image.width = Math.round(image.naturalWidth * ideal_ratio);
+      image.classList.remove('hidden');
+    }
+
+    images.forEach(max_img_width);
+  });
+
   return (
     <div className='flex flex-col items-center justify-center min-h-screen py-2'>
       <Head>
@@ -11,7 +30,6 @@ const Home = () => {
           name='description'
           content="Logo Cloud based on Piper Haywoods's formula https://piperhaywood.com/images-consistent-surface-area/"
         />
-        <script type='text/javascript' src='/js/piper.js'></script>
 
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -20,11 +38,11 @@ const Home = () => {
         <h1 className='text-2xl font-bold'>Area-based image sizing with JS</h1>
 
         <h3>
-          <b>
-            <a href='/'>Javascript</a>
-          </b>
+          <a href='/'>Javascript</a>
           {' | '}
-          <a href='/react'>useEffect</a>
+          <b>
+            <a href='/react'>useEffect</a>
+          </b>
         </h3>
 
         <p className='mt-3 text-sm max-w-xl'>
