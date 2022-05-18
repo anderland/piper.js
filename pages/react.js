@@ -3,7 +3,7 @@ import logos from '../public/logos/logos.json';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
-const Home = () => {
+const React_Page = () => {
   useEffect(() => {
     const images = document.querySelectorAll(
       '.logos.logos--config-dynamic .logo'
@@ -117,4 +117,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default React_Page;
