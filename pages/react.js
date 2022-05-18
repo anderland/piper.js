@@ -85,7 +85,7 @@ const React_Page = () => {
             .sort((a, b) => (a.name > b.name ? 1 : -1))
             .map((logo) => (
               <Link key={logo.files[0]} href={`/${logo.url}`}>
-                <div className='col-span-1 flex justify-center py-8 px-8 bg-gray-100 h-40 logos'>
+                <div className='col-span-1 flex justify-center py-8 px-8 bg-gray-100 h-40 logos logos--config-dynamic'>
                   {logo.files[1] ? (
                     <img
                       className='logo cursor-pointer hidden'
