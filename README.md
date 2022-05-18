@@ -21,8 +21,7 @@ Install, build (to grab the data) & start the server.
 ```sh
 cd piper.js
 yarn install
-yarn build
-yarn develop
+yarn dev
 ```
 
 [piper haywoods]: https://piperhaywood.com/images-consistent-surface-area/
