@@ -1,29 +1,7 @@
 import Head from 'next/head';
-import logos from '../public/logos/logos.json';
 import Link from 'next/link';
-// import dynamic from 'next/dynamic';
 
-import { useEffect } from 'react';
-import Logo from '../components/Logo';
-
-// const Logo = dynamic(
-//   import('../components/Logo')
-//     .then((c) => {
-//       console.log('Logo loaded');
-//       return c;
-//     })
-//     .catch((err) => console.log(err)),
-//   {
-//     loading: () => (
-//       <div className='col-span-1 flex justify-center py-8 px-8 bg-gray-100'>
-//         loading
-//       </div>
-//     ),
-//     ssr: false,
-//   }
-// );
-
-const React_Page = () => {
+const Random = () => {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen py-2'>
       <Head>
@@ -36,21 +14,22 @@ const React_Page = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='flex flex-col items-center justify-center w-full flex-1 px-20'>
+      <main className='flex flex-col items-center justify-center w-full flex-1 px-20 '>
         <h1 className='text-2xl font-bold'>Area-based image sizing with JS</h1>
 
         <h3>
           <a href='/'>Javascript</a>
           {' | '}
-          <b>
-            <a href='/react'>useEffect</a>
-          </b>
-          {' | '}
 
-          <a href='/random'>random</a>
+          <a href='/react'>useEffect</a>
+
+          {' | '}
+          <b>
+            <a href='/random'>random</a>
+          </b>
         </h3>
 
-        <p className='mt-3 text-sm max-w-xl'>
+        <p className='mt-3 text-sm max-w-xl min-h-screen'>
           This is an attempt at resizing logos with JS based on{' '}
           <Link href='https://piperhaywood.com/images-consistent-surface-area/'>
             <a className='text-green-500 hover:text-green-400'>
@@ -86,11 +65,7 @@ const React_Page = () => {
         </p>
 
         <div className='mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-4 lg:mt-8'>
-          {logos
-            .sort((a, b) => (a.name > b.name ? 1 : -1))
-            .map((logo, index) => (
-              <Logo logo={logo} key={index} />
-            ))}
+          nothing to see here
         </div>
       </main>
 
@@ -106,4 +81,4 @@ const React_Page = () => {
   );
 };
 
-export default React_Page;
+export default Random;
