@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className='max-w-xl mx-auto bg-rose-200'>
+    <div className='max-w-xl mx-auto'>
       <h1 className='text-2xl font-bold'>
         Area-based image sizing with JS and React
       </h1>
