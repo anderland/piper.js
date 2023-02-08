@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className='max-w-xl mx-auto'>
+    <div className='max-w-xl mx-auto mt-8'>
       <h1 className='text-2xl font-bold'>
         Area-based image sizing with JS and React
       </h1>
@@ -9,7 +9,7 @@ const Hero = () => {
         This is an effort to resize logos using JavaScript based on{' '}
         <a
           href='https://piperhaywood.com/images-consistent-surface-area/'
-          className='text-green-500 hover:text-green-400'
+          className='text-emerald-500 hover:text-emerald-400'
         >
           Piper Haywoods
         </a>
@@ -17,14 +17,14 @@ const Hero = () => {
         width/maximum height approach is demonstrated in{' '}
         <a
           href='https://nicksherman.com/size-by-area/'
-          className='text-green-500 hover:text-green-400'
+          className='text-emerald-500 hover:text-emerald-400'
         >
           Nick Sherman
         </a>
         's demo. The logos used in the demo were sourced from{' '}
         <a
           href='https://github.com/gilbarbara/logos'
-          className='text-green-500 hover:text-green-400'
+          className='text-emerald-500 hover:text-emerald-400'
         >
           Gil Barbara
         </a>
@@ -32,7 +32,7 @@ const Hero = () => {
         presented in a{' '}
         <a
           href='https://codepen.io/danpaquette/pen/jXpbQK'
-          className='text-green-500 hover:text-green-400'
+          className='text-emerald-500 hover:text-emerald-400'
         >
           Pen
         </a>{' '}
