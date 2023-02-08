@@ -2,13 +2,14 @@
 
 ## Area-based image sizing with JS
 
-This is an attempt at resizing logos with JS based on [Piper Haywoods]'s formula. The benefits of this approach vs. a max-width/max-height one are shown in [Nick Sherman]'s demo. The actual logos for this demo come from [Gil Barbara].
+his is an effort to resize logos using JavaScript based on [Piper Haywoods]'s formula. The superiority of this method compared to using a maximum width/maximum height approach is demonstrated in [Nick Sherman]'s demo. The logos used in the demo were sourced from [Gil Barbara].
 
-I also have looked at the proportional image normalization formula shown in this [Pen](https://codepen.io/danpaquette/pen/jXpbQK) by Dan Paquette, but I thought that Piper's one worked best for my needs (logos in very weird shapes).
+I also considered the proportional image normalization formula presented in a [Pen](https://codepen.io/danpaquette/pen/jXpbQK) by Dan Paquette, but found that Piper's formula was more suitable for logos with unique and irregular shapes.
 
-Quick [Nextjs](https://tailwindcss.com/docs/guides/nextjs) wrap only for demo purposes.
+I am including both a JavaScript version and a React version using useState. 
 
-Please feel free to improve this.
+Feel free to improve.
+
 
 ![Screenshot](https://raw.githubusercontent.com/anderland/piper.js/main/piper.png)
 
@@ -21,7 +22,7 @@ Install, build (to grab the data) & start the server.
 ```sh
 cd piper.js
 yarn install
-yarn dev
+yarn develop
 ```
 
 [piper haywoods]: https://piperhaywood.com/images-consistent-surface-area/
