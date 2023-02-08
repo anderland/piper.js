@@ -5,7 +5,6 @@ import path from 'path';
 
 import Layout from '../components/Layout';
 import Logos from '../components/Logos';
-import Hero from '../components/Hero';
 
 const React = ({ logos }) => {
   const handler = (e) => {
