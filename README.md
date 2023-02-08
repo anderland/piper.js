@@ -1,8 +1,8 @@
 # Piper.js
 
-## Area-based image sizing with JS
+## Area-based image sizing with JavaScript and React
 
-his is an effort to resize logos using JavaScript based on [Piper Haywoods]'s formula. The superiority of this method compared to using a maximum width/maximum height approach is demonstrated in [Nick Sherman]'s demo. The logos used in the demo were sourced from [Gil Barbara].
+This is an effort to resize logos using JavaScript based on [Piper Haywoods]'s formula. The superiority of this method compared to using a maximum width/maximum height approach is demonstrated in [Nick Sherman]'s demo. The logos used in the demo were sourced from [Gil Barbara].
 
 I also considered the proportional image normalization formula presented in a [Pen](https://codepen.io/danpaquette/pen/jXpbQK) by Dan Paquette, but found that Piper's formula was more suitable for logos with unique and irregular shapes.
 
