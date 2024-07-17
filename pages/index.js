@@ -1,10 +1,32 @@
 import { useEffect } from 'react';
-
 import fs from 'fs';
 import path from 'path';
-
 import Layout from '../components/Layout';
 import Logos from '../components/Logos';
+
+const append_logos = [
+  {
+    name: 'append_1',
+    shortname: 'append_1',
+    url: '#',
+    files: ['devoir.svg'],
+    path: '/img/',
+  },
+  {
+    name: 'append_2',
+    shortname: 'append_2',
+    url: '#',
+    files: ['globe.svg'],
+    path: '/img/',
+  },
+  {
+    name: 'append_3',
+    shortname: 'append_3',
+    url: '#',
+    files: ['star.svg'],
+    path: '/img/',
+  },
+];
 
 const React = ({ logos }) => {
   const handler = (e) => {
@@ -40,7 +62,7 @@ const React = ({ logos }) => {
   return (
     <>
       <Layout>
-        <Logos logos={logos} />
+        <Logos logos={logos} shuffle={false} />
       </Layout>
     </>
   );
@@ -51,9 +73,11 @@ export async function getStaticProps() {
   const logosJson = fs.readFileSync(logosPath, 'utf-8');
   const logos = JSON.parse(logosJson);
 
+  const combined_logos = append_logos.concat(logos);
+
   return {
     props: {
-      logos,
+      logos: combined_logos,
     },
   };
 }

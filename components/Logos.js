@@ -8,12 +8,12 @@ function shuffle(array) {
   return array;
 }
 
-const Logos = ({ logos }) => {
-  const shuffled = shuffle(logos);
+const Logos = ({ logos, shuffle = true }) => {
+  const display_logos = shuffle ? shuffle(logos) : logos;
 
   return (
     <>
-      {shuffled.map((logo) => (
+      {display_logos.map((logo) => (
         <Logo key={logo.files[0]} logo={logo} />
       ))}
     </>
