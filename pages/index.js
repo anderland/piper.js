@@ -1,13 +1,3 @@
-// shuffle_array function
-function shuffle_array(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-// Index_Next component
 import { useState, useEffect } from 'react';
 import fs from 'fs';
 import path from 'path';
@@ -49,6 +39,14 @@ const append_logos = [
     path: '/img/',
   },
 ];
+
+function shuffle_array(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 const Index_Next = ({ logos }) => {
   const [algorithm, setAlgorithm] = useState('max_width');
@@ -187,10 +185,8 @@ export async function getStaticProps() {
   const logosJson = fs.readFileSync(logosPath, 'utf-8');
   const logos = JSON.parse(logosJson);
 
-  // Shuffle the existing logos
   const shuffled_logos = shuffle_array(logos);
 
-  // Combine the appended logos with the shuffled existing logos
   const combined_logos = append_logos.concat(shuffled_logos);
 
   return {
